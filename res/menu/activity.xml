@@ -33,6 +33,14 @@
         android:visible="false"
         app:showAsAction="always|collapseActionView"
         app:actionViewClass="androidx.appcompat.widget.SearchView"/>
+<!-- CubeOS: iOS-style "Cancel" text button, shown only by the picker (PickActivity).
+     Same result as backing out of the picker: RESULT_CANCELED, nothing is granted. -->
+    <item
+        android:id="@+id/option_menu_cancel"
+        android:title="@android:string/cancel"
+        android:orderInCategory="100"
+        android:visible="false"
+        app:showAsAction="always|withText"/>
 <!-- This group is being hidden when searching is in full bar mode-->
     <group android:id="@+id/group_hide_when_searching">
         <item

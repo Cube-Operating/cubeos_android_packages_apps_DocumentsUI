@@ -534,6 +534,8 @@ public class DirectoryFragment extends Fragment implements SwipeRefreshLayout.On
             mLayout.setSpanSizeLookup(lookup);
         }
         mRecView.setLayoutManager(mLayout);
+        // CubeOS: iOS inset-grouped look for list rows (drawing only).
+        mRecView.addItemDecoration(new InsetGroupDecoration(getContext()));
 
         mModel.addUpdateListener(mAdapter.getModelUpdateListener());
         mModel.addUpdateListener(mModelUpdateListener);

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CubeOS: iOS-style grouped list tokens (light). Used by both theme branches and by
+     dirlist/InsetGroupDecoration, so they live outside the flag(...) resource dirs. -->
+<resources>
+    <!-- secondarySystemGroupedBackground -->
+    <color name="cube_grouped_surface">#FFFFFF</color>
+    <!-- opaqueSeparator -->
+    <color name="cube_separator">#C6C6C8</color>
+    <!-- tertiarySystemFill -->
+    <color name="cube_chip_fill">#1F767680</color>
+    <!-- secondaryLabel -->
+    <color name="cube_secondary_label">#993C3C43</color>
+</resources>

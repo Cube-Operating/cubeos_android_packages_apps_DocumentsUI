@@ -26,7 +26,7 @@
 
         <!-- Color section -->
         <item name="android:colorAccent">@color/primary</item>
-        <item name="android:colorBackground">@android:color/white</item>
+        <item name="android:colorBackground">@color/app_background_color</item>
         <item name="android:colorBackgroundFloating">@color/background_floating</item>
         <item name="android:colorControlHighlight">@color/ripple_material_light</item>
         <item name="android:colorControlActivated">@color/primary</item>

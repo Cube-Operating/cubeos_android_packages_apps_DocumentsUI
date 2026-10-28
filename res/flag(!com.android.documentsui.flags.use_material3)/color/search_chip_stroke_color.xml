@@ -18,6 +18,8 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_selected="true" android:color="@android:color/transparent"/>
     <item android:state_pressed="true" android:color="@android:color/transparent"/>
-    <item android:state_enabled="true" android:color="?android:strokeColor"/>
+    <!-- CubeOS: no outline; only the keyboard focus ring (stroke set in code) shows. -->
+    <item android:state_focused="true" android:color="?android:attr/colorAccent"/>
+    <item android:state_enabled="true" android:color="@android:color/transparent"/>
     <item android:state_enabled="false" android:color="@android:color/transparent"/>
 </selector>

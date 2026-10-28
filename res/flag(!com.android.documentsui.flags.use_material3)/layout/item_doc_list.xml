@@ -14,11 +14,16 @@
      limitations under the License.
 -->
 
+<!-- CubeOS: iOS inset-grouped row. The rounded group background and the inset hairline
+     separators are drawn by dirlist/InsetGroupDecoration; the row itself stays transparent
+     (list_item_background only paints focus/selection/drag states). -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/cube_group_margin"
+    android:layout_marginEnd="@dimen/cube_group_margin"
     android:background="@drawable/list_item_background"
     android:foreground="?android:attr/selectableItemBackground"
     android:clickable="true"
@@ -30,23 +35,25 @@
         android:layout_height="wrap_content"
         android:baselineAligned="false"
         android:gravity="center_vertical"
-        android:minHeight="@dimen/list_item_height"
+        android:minHeight="@dimen/cube_row_min_height"
         android:orientation="horizontal">
 
       <FrameLayout
           android:id="@+id/icon"
           android:pointerIcon="hand"
-          android:layout_width="@dimen/list_item_width"
-          android:layout_height="@dimen/list_item_height"
-          android:paddingBottom="@dimen/list_item_icon_padding"
-          android:paddingTop="@dimen/list_item_icon_padding"
-          android:paddingEnd="16dp"
-          android:paddingStart="@dimen/list_item_padding">
+          android:layout_width="@dimen/cube_row_icon_width"
+          android:layout_height="@dimen/cube_row_min_height"
+          android:paddingBottom="@dimen/cube_row_icon_padding_vertical"
+          android:paddingTop="@dimen/cube_row_icon_padding_vertical"
+          android:paddingEnd="@dimen/cube_row_icon_padding_end"
+          android:paddingStart="@dimen/cube_row_icon_padding_start">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="@dimen/cube_row_thumb_radius"
+            app:strokeWidth="0dp"
             app:cardElevation="0dp">
 
           <ImageView
@@ -84,6 +91,8 @@
           android:layout_weight="1"
           android:orientation="vertical"
           android:layout_gravity="center_vertical"
+          android:paddingTop="8dp"
+          android:paddingBottom="8dp"
           android:layout_marginEnd="@dimen/list_item_padding">
 
         <LinearLayout
@@ -105,10 +114,10 @@
               android:id="@android:id/title"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:ellipsize="end"
+              android:ellipsize="middle"
               android:singleLine="true"
               android:textAlignment="viewStart"
-              android:textAppearance="?android:attr/textAppearanceListItem" />
+              android:textAppearance="@style/CubeListTitle" />
 
         </LinearLayout>
 
@@ -117,7 +126,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:baselineAligned="false"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -133,31 +142,25 @@
 
       </LinearLayout>
 
+      <!-- Preview button: kept (same id/behaviour), drawn as a small secondary glyph. -->
       <FrameLayout
           android:id="@+id/preview_icon"
-          android:layout_width="@dimen/list_item_width"
-          android:layout_height="@dimen/list_item_height"
-          android:padding="@dimen/list_item_icon_padding"
+          android:layout_width="44dp"
+          android:layout_height="@dimen/cube_row_min_height"
+          android:layout_marginEnd="4dp"
           android:focusable="true"
           android:clickable="true">
 
         <ImageView
-            android:layout_width="@dimen/check_icon_size"
-            android:layout_height="@dimen/check_icon_size"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:scaleType="fitCenter"
-            android:tint="?android:attr/colorControlNormal"
+            android:tint="@color/cube_secondary_label"
             android:src="@drawable/ic_zoom_out" />
 
       </FrameLayout>
 
     </LinearLayout>
-
-  <View
-      android:layout_width="match_parent"
-      android:layout_height="1dp"
-      android:layout_marginStart="72dp"
-      android:layout_marginEnd="8dp"
-      android:background="?android:strokeColor" />
 
 </LinearLayout>

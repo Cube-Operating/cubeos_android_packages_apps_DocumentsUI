@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CubeOS: iOS-style inset grouped list metrics. -->
+<resources>
+    <dimen name="cube_group_radius">10dp</dimen>
+    <dimen name="cube_group_margin">16dp</dimen>
+    <dimen name="cube_row_min_height">60dp</dimen>
+    <dimen name="cube_row_icon_width">68dp</dimen>
+    <dimen name="cube_row_icon_padding_vertical">10dp</dimen>
+    <dimen name="cube_row_icon_padding_start">16dp</dimen>
+    <dimen name="cube_row_icon_padding_end">12dp</dimen>
+    <dimen name="cube_row_thumb_radius">6dp</dimen>
+    <!-- Separator starts where the row text starts (icon area width). -->
+    <dimen name="cube_separator_inset">68dp</dimen>
+    <dimen name="cube_separator_height">0.5dp</dimen>
+</resources>

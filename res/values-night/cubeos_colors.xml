@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CubeOS: iOS-style grouped list tokens (dark). -->
+<resources>
+    <color name="cube_grouped_surface">#1C1C1E</color>
+    <color name="cube_separator">#38383A</color>
+    <color name="cube_chip_fill">#3D767680</color>
+    <color name="cube_secondary_label">#99EBEBF5</color>
+</resources>

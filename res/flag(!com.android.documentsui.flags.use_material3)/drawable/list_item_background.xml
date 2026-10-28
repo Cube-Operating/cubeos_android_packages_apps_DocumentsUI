@@ -26,6 +26,7 @@
     </item>
     <item android:state_selected="false"
           android:state_focused="false">
-        <color android:color="?android:attr/colorBackground"/>
+        <!-- CubeOS: transparent so InsetGroupDecoration's rounded group shows through. -->
+        <color android:color="@android:color/transparent"/>
     </item>
 </selector>

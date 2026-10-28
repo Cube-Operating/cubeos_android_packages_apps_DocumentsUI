@@ -89,10 +89,10 @@
 
     <dimen name="inspector_header_height">280dp</dimen>
 
-    <dimen name="root_info_header_height">60dp</dimen>
-    <dimen name="root_info_header_horizontal_padding">24dp</dimen>
+    <dimen name="root_info_header_height">44dp</dimen>
+    <dimen name="root_info_header_horizontal_padding">32dp</dimen>
 
-    <dimen name="search_chip_group_margin">20dp</dimen>
+    <dimen name="search_chip_group_margin">12dp</dimen>
     <dimen name="search_chip_spacing">8dp</dimen>
     <dimen name="search_chip_half_spacing">4dp</dimen>
     <dimen name="search_chip_icon_padding">4dp</dimen>
@@ -101,8 +101,8 @@
     <dimen name="dialog_content_padding_top">18dp</dimen>
     <dimen name="dialog_content_padding_bottom">24dp</dimen>
 
-    <dimen name="apps_row_title_height">48dp</dimen>
-    <dimen name="apps_row_title_padding_start">24dp</dimen>
+    <dimen name="apps_row_title_height">36dp</dimen>
+    <dimen name="apps_row_title_padding_start">32dp</dimen>
     <dimen name="apps_row_item_width">92dp</dimen>
     <dimen name="apps_row_item_height">82dp</dimen>
     <dimen name="apps_row_app_icon_size">32dp</dimen>
@@ -114,16 +114,16 @@
     <dimen name="apps_row_exit_icon_margin_bottom">6dp</dimen>
     <dimen name="apps_row_item_text_margin_horizontal">8dp</dimen>
 
-    <dimen name="search_bar_elevation">3dp</dimen>
-    <dimen name="search_bar_radius">8dp</dimen>
+    <dimen name="search_bar_elevation">0dp</dimen>
+    <dimen name="search_bar_radius">10dp</dimen>
     <dimen name="search_bar_background_margin_start">0dp</dimen>
     <dimen name="search_bar_background_margin_end">0dp</dimen>
     <dimen name="search_bar_margin">8dp</dimen>
     <dimen name="search_bar_text_size">16dp</dimen>
 
-    <dimen name="action_bar_elevation">3dp</dimen>
+    <dimen name="action_bar_elevation">0dp</dimen>
     <dimen name="action_bar_margin">1dp</dimen>
-    <dimen name="action_bar_size">48dp</dimen>
+    <dimen name="action_bar_size">56dp</dimen>
     <dimen name="action_mode_text_size">18sp</dimen>
 
     <dimen name="refresh_icon_range">64dp</dimen>

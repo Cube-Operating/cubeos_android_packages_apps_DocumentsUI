@@ -28,12 +28,18 @@
         android:paddingStart="@dimen/apps_row_title_padding_start"
         android:textAppearance="@style/SortTitle"
         android:text="@string/apps_row_title"
-        android:textAllCaps="true"
-        android:gravity="center"/>
+        android:textAllCaps="false"
+        android:gravity="center_vertical"/>
 
+    <!-- CubeOS: apps sit in a rounded grouped card. -->
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/cube_group_margin"
+        android:layout_marginEnd="@dimen/cube_group_margin"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/cube_group_background"
+        android:clipToOutline="true"
         android:fillViewport="true"
         android:scrollbars="none">
         <LinearLayout

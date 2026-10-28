@@ -339,6 +339,14 @@ public class PickActivity extends BaseActivity implements ActionHandler.Addons {
         super.onPrepareOptionsMenu(menu);
         mInjector.menuManager.updateOptionMenu(menu);
 
+        // CubeOS: iOS-style Cancel text button in the picker toolbar. Folder pickers already
+        // show Cancel in their bottom bar (PickFragment), so skip it there.
+        final MenuItem cancel = menu.findItem(R.id.option_menu_cancel);
+        if (cancel != null) {
+            cancel.setVisible(mState.action != ACTION_OPEN_TREE
+                    && mState.action != ACTION_PICK_COPY_DESTINATION);
+        }
+
         final DocumentInfo cwd = getCurrentDirectory();
 
         if (mState.action == ACTION_CREATE) {
@@ -352,6 +360,12 @@ public class PickActivity extends BaseActivity implements ActionHandler.Addons {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         mInjector.pickResult.increaseActionCount();
+        if (item.getItemId() == R.id.option_menu_cancel) {
+            // Same outcome as leaving the picker with Back: nothing is returned or granted.
+            setResult(RESULT_CANCELED);
+            finish();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
